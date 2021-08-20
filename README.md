@@ -11,5 +11,7 @@ Load ServoTest.pd into Pure Data (https://puredata.info/) and use the sliders to
 * Breathing - A cyborg breathing effect. This differs from the fan in that the airway is narrower and also has a tube-like effect which can be engaged (tube in the breathing sense; not synonymous with valve)
 * Frying - A simple circuits frying effect
 
+If you find this useful, all I ask is a mention somewhere if you release a production with it.
 More effects soon!
+
 - 2021 Borg5of9SF
