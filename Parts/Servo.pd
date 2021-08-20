@@ -1,0 +1,90 @@
+#N canvas 162 126 1129 1011 12;
+#X text 121 777 Housing;
+#X obj 45 428 noise~;
+#X obj 178 485 expr~ ($v1 - .5) * 2;
+#X obj 235 141 vsl 15 128 0.05 0.1 0 1 empty empty Noise 0 -9 0 10
+-262144 -1 -1 6900 1;
+#X obj 41 493 *~;
+#X obj 112 623 +~;
+#X obj 356 419 noise~;
+#X obj 142 552 *~ 0.1;
+#X obj 152 423 phasor~;
+#X obj 785 28 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 288 665 expr 1 - pow(1 - $f1 \, 2);
+#X obj 105 752 bp~ 2200 5;
+#X text 218 763 Scaler;
+#X obj 135 383 expr~ $v1 * $v3 + $v2;
+#X obj 294 141 vsl 15 128 50 800 0 1 empty empty Grind 0 -9 0 10 -262144
+-1 -1 4100 1;
+#X obj 117 141 vsl 15 128 10000 1000 0 1 empty empty Recess 0 -9 0
+10 -262144 -1 -1 2500 1;
+#X obj 177 141 vsl 15 128 16 4 0 1 empty empty Size 0 -9 0 10 -262144
+-1 -1 2300 1;
+#X obj 350 141 vsl 15 128 800 3000 0 1 empty empty Range 0 -9 0 10
+-262144 -1 -1 2600 1;
+#X obj 716 553 sel 0;
+#X text 105 701 Vol ramp;
+#X obj 119 672 *~;
+#X obj 209 734 * 0.5;
+#X obj 123 836 lop~ 6000;
+#X obj 402 783 *~ 0.2;
+#X obj 332 834 +~;
+#X obj 251 832 *~ 0.5;
+#X obj 177 30 loadbang;
+#X obj 2 0 cnv 15 100 100 empty empty empty 0 0 0 14 -261682 -66577
+0;
+#X obj 320 905 outlet~;
+#X obj 622 -5 inlet;
+#X text 537 -4 RPMs 0-1.0;
+#X text 10 861 Borg5of9SF audio toolkit;
+#X obj 410 141 vsl 15 128 0.1 2 1 1 empty empty Gain 0 -9 0 10 -262144
+-1 -1 8500 1;
+#X obj 164 887 *~;
+#X obj 214 580 expr~ $v1 * $v2 + 100;
+#X text 760 555 BANG when the servo hits bottom;
+#X obj 719 911 outlet;
+#X obj 480 281 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 889 19 inlet~;
+#X text 833 -5 Go back through housing;
+#X obj 683 20 clip 0 1;
+#X connect 1 0 4 0;
+#X connect 2 0 7 0;
+#X connect 3 0 4 1;
+#X connect 4 0 5 0;
+#X connect 5 0 20 0;
+#X connect 6 0 13 0;
+#X connect 7 0 5 1;
+#X connect 8 0 2 0;
+#X connect 9 0 10 0;
+#X connect 9 0 34 0;
+#X connect 9 0 18 0;
+#X connect 10 0 21 0;
+#X connect 11 0 22 0;
+#X connect 13 0 8 0;
+#X connect 14 0 13 2;
+#X connect 15 0 11 1;
+#X connect 16 0 11 2;
+#X connect 17 0 34 1;
+#X connect 18 0 37 0;
+#X connect 18 0 36 0;
+#X connect 20 0 11 0;
+#X connect 21 0 20 1;
+#X connect 22 0 33 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 25 0 11 0;
+#X connect 26 0 17 0;
+#X connect 26 0 15 0;
+#X connect 26 0 16 0;
+#X connect 26 0 3 0;
+#X connect 26 0 14 0;
+#X connect 26 0 32 0;
+#X connect 29 0 40 0;
+#X connect 32 0 33 1;
+#X connect 33 0 28 0;
+#X connect 34 0 13 1;
+#X connect 38 0 11 0;
+#X connect 40 0 9 0;
+#X coords 0 -1 1 1 400 200 1 100 100;

@@ -1,0 +1,51 @@
+#N canvas 189 0 1374 986 12;
+#X obj 402 205 noise~;
+#X obj 356 291 *~;
+#X obj 404 252 vline~;
+#X obj 447 152 delay 90;
+#X msg 345 161 1 \, 0 10;
+#X msg 497 198 0.8 \, 0 6;
+#X obj 208 345 lop~ 4000;
+#X obj 402 363 vline~;
+#X obj 317 411 osc~;
+#X msg 425 290 1 \, 0 20;
+#X obj 362 380 *~;
+#X obj 334 76 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 133 146 vsl 15 128 100 3000 0 1 empty empty Thunkzap 0 -9 0
+10 -262144 -1 -1 1000 1;
+#X obj 345 447 hip~ 1;
+#X text 401 453 DC;
+#X obj 198 147 vsl 15 128 0.0025 0.25 0 1 empty empty Gain 0 -9 0 10
+-262144 -1 -1 12700 1;
+#X obj 323 513 *~;
+#X obj 336 479 *~ 0.5;
+#X obj 341 40 inlet;
+#X obj 336 574 outlet~;
+#X obj 7 3 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 562 40 loadbang;
+#X text 1140 938 Borg5of9SF Audio toolkit;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 1 1;
+#X connect 3 0 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 16 0;
+#X connect 7 0 10 1;
+#X connect 8 0 13 0;
+#X connect 9 0 7 0;
+#X connect 10 0 8 0;
+#X connect 11 0 4 0;
+#X connect 11 0 3 0;
+#X connect 11 0 9 0;
+#X connect 12 0 10 0;
+#X connect 13 0 17 0;
+#X connect 15 0 16 1;
+#X connect 16 0 19 0;
+#X connect 17 0 16 0;
+#X connect 18 0 11 0;
+#X connect 21 0 12 0;
+#X connect 21 0 15 0;
+#X coords 0 -1 1 1 150 200 1 100 100;

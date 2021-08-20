@@ -1,0 +1,35 @@
+#N canvas 397 153 998 686 12;
+#X obj 70 50 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 64 299 vsl 15 128 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 337 559 +~;
+#X obj 325 633 dac~;
+#X obj 143 48 Parts/Servo;
+#X obj 147 297 Parts/Fan;
+#X obj 375 297 Parts/Switch;
+#X obj 551 48 Parts/Breathing;
+#X obj 551 297 Parts/Frying;
+#X text 643 296 Connect me! :);
+#X text 862 7 (Example patch);
+#X obj 602 579 writesf~;
+#X msg 608 476 open CyborgSounds.wav;
+#X msg 719 512 start;
+#X msg 846 512 stop;
+#X text 608 423 To record:;
+#X text 846 540 3.) here when done;
+#X text 719 540 2.) here to begin rolling;
+#X text 608 449 1.) click here to prep;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 2 0 11 0;
+#X connect 4 0 2 0;
+#X connect 4 1 6 0;
+#X connect 5 0 2 0;
+#X connect 6 0 4 1;
+#X connect 7 0 2 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 0;
+#X connect 14 0 11 0;
